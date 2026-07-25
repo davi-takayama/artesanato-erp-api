@@ -1,4 +1,4 @@
-package projetos.artesanatoerpapi.application.categoriaproduto;
+package projetos.artesanatoerpapi.application.categoriaproduto.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

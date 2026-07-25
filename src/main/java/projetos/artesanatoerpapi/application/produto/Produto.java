@@ -3,7 +3,7 @@ package projetos.artesanatoerpapi.application.produto;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import projetos.artesanatoerpapi.application.categoriaproduto.CategoriaProduto;
+import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProduto;
 import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 
 @EqualsAndHashCode(callSuper = true)
