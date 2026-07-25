@@ -6,15 +6,10 @@ import java.util.List;
 
 @Data
 public class ApiResponseDto<Dto> {
-    private Dto data;
     private final String message;
     private final int status;
+    private Dto data;
     private List<String> extraInfoList;
-
-    public ApiResponseDto() {
-        this.status = 200;
-        this.message = "Success";
-    }
 
     public ApiResponseDto(Dto data) {
         this.data = data;

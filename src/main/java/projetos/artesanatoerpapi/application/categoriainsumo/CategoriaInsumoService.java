@@ -1,6 +1,5 @@
 package projetos.artesanatoerpapi.application.categoriainsumo;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,18 +16,11 @@ import java.util.UUID;
 @Service
 public class CategoriaInsumoService extends GenericService<CategoriaInsumo, CategoriaInsumoDto, CategoriaInsumoListingDto> {
 
-    private final CategoriaInsumoRepository categoriaEventoRepository;
-
     @Autowired
-    public CategoriaInsumoService(CategoriaInsumoRepository categoriaEventoRepository) {
-        this.categoriaEventoRepository = categoriaEventoRepository;
-        this.entityClass = CategoriaInsumo.class;
-        this.converter = new CategoriaInsumoConverter();
-    }
-
-    @PostConstruct
-    void init() {
+    public CategoriaInsumoService(CategoriaInsumoRepository categoriaEventoRepository, CategoriaInsumoConverter categoriaInsumoConverter) {
         super.repository = categoriaEventoRepository;
+        this.entityClass = CategoriaInsumo.class;
+        this.converter = categoriaInsumoConverter;
     }
 
     @Transactional

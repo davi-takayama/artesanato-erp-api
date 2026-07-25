@@ -4,8 +4,14 @@ info:
   seq: 1
 
 http:
-  method: GET
+  method: POST
   url: http://localhost:8080/categoria-evento
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "nome teste"
+      }
   auth: inherit
 
 settings:

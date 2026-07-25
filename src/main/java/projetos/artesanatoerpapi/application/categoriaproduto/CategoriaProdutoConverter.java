@@ -1,5 +1,6 @@
 package projetos.artesanatoerpapi.application.categoriaproduto;
 
+import org.springframework.stereotype.Component;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProduto;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoDto;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoListingDto;
@@ -8,6 +9,7 @@ import projetos.artesanatoerpapi.genericclasses.ConverterInterface;
 import java.util.List;
 import java.util.UUID;
 
+@Component
 public class CategoriaProdutoConverter implements ConverterInterface<CategoriaProduto, CategoriaProdutoDto, CategoriaProdutoListingDto> {
     @Override
     public CategoriaProduto dtoToOrm(CategoriaProdutoDto dto, CategoriaProduto orm) {

@@ -11,7 +11,7 @@ import java.util.UUID;
 @NoRepositoryBean
 public interface GenericRepository<Orm extends BaseOrm> extends JpaRepository<Orm, UUID> {
     @Override
-    @Query("SELECT o FROM #{#entityName} o WHERE o.id = ?1 AND (o.deleted IS NULL OR o.deleted = false)")
+    @Query("SELECT o FROM #{#entityName} o WHERE o.id = ?1")
     @NullMarked
     Optional<Orm> findById(UUID uuid);
 }

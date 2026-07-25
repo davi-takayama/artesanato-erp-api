@@ -1,6 +1,5 @@
 package projetos.artesanatoerpapi.application.categoriaevento;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,19 +16,13 @@ import java.util.UUID;
 @Service
 public class CategoriaEventoService extends GenericService<CategoriaEvento, CategoriaEventoDto, CategoriaEventoListingDto> {
 
-    private final CategoriaEventoRepository categoriaEventoRepository;
-
     @Autowired
-    public CategoriaEventoService(CategoriaEventoRepository categoriaEventoRepository) {
-        this.categoriaEventoRepository = categoriaEventoRepository;
+    public CategoriaEventoService(CategoriaEventoRepository categoriaEventoRepository, CategoriaEventoConverter categoriaEventoConverter) {
+        super.repository = categoriaEventoRepository;
         this.entityClass = CategoriaEvento.class;
-        this.converter = new CategoriaEventoConverter();
+        super.converter = categoriaEventoConverter;
     }
 
-    @PostConstruct
-    void init() {
-        super.repository = categoriaEventoRepository;
-    }
 
     @Transactional
     public ApiResponseDto<CategoriaEventoDto> create(CategoriaEventoDto dto) {

@@ -4,8 +4,8 @@ info:
   seq: 1
 
 http:
-  method: GET
-  url: http://localhost:8080/categoria-evento
+  method: POST
+  url: http://localhost:8080/categoria-insumo
   auth: inherit
 
 settings:

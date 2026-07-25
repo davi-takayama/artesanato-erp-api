@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import projetos.artesanatoerpapi.application.evento.Evento;
-import projetos.artesanatoerpapi.application.produto.Produto;
+import projetos.artesanatoerpapi.application.produto.models.Produto;
 import projetos.artesanatoerpapi.enumeration.FormaPagamentoEnum;
 import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 

@@ -1,9 +1,10 @@
-package projetos.artesanatoerpapi.application.produto;
+package projetos.artesanatoerpapi.application.produto.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProduto;
+import projetos.artesanatoerpapi.application.produto.enumeration.ProdutoTipo;
 import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 
 @EqualsAndHashCode(callSuper = true)
@@ -13,21 +14,18 @@ import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 public class Produto extends BaseOrm {
     @Column(nullable = false)
     private String nome;
-    @Column
+    @Column(name = "id_imagem")
     private String idImagem;
-    @Column
+    @Transient
+    private String imagemmBase64;
+    @Column(name = "preco_venda")
     private Float precoVenda;
+    @Column(name = "preco_custo")
+    private Float precoCusto;
+    @Column(name = "produto_tipo",  nullable = false)
+    private ProdutoTipo produtoTipo;
 
     @JoinColumn(name = "categoria_id", referencedColumnName = "id")
     @ManyToOne
     private CategoriaProduto categoriaProduto;
-
-    @JoinColumn(name = "produto_id", referencedColumnName = "id")
-    @ManyToOne
-    private Produto produto;
-
-    @Transient
-    private Float precoCusto;
-    @Transient
-    private Float margemLucro;
 }

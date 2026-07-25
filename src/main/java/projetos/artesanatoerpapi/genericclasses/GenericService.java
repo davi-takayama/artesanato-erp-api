@@ -9,7 +9,7 @@ import java.util.UUID;
 import java.util.function.Function;
 
 @Slf4j
-public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, ListedItem extends ListedItemDto>{
+public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, ListedItem extends ListedItemDto> {
 
     protected ConverterInterface<Orm, Dto, ListedItem> converter;
     protected JpaRepository<Orm, UUID> repository;
@@ -91,17 +91,21 @@ public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, L
         return new ApiResponseDto<>(this.entityClass.getSimpleName() + " deleted successfully");
     }
 
+    @SuppressWarnings("unused")
     public Orm dtoToOrm(Dto dto, Orm orm) {
         return this.converter.dtoToOrm(dto, orm);
     }
+    @SuppressWarnings("unused")
 
     public Dto ormToDto(Orm orm) {
         return this.converter.ormToDto(orm);
     }
+    @SuppressWarnings("unused")
 
     public List<Dto> ormListToDtoList(List<Orm> ormList) {
         return this.converter.ormListToDtoList(ormList);
     }
+    @SuppressWarnings("unused")
 
     public List<Orm> dtoListToOrmList(List<Dto> dtoList) {
         return this.converter.dtoListToOrmList(dtoList);

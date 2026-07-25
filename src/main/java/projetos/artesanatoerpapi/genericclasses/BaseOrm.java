@@ -16,15 +16,9 @@ public class BaseOrm {
     @GeneratedValue
     private UUID id;
 
-    @Column(nullable = false)
-    private Date createdAt;
+    @Column(nullable = false, updatable = false)
+    private Date createdAt = new Date();
 
     @Column(nullable = false)
-    private Date updatedAt;
-
-    @Column
-    private Boolean deleted;
-
-    @Column
-    private Date deletedAt;
+    private Date updatedAt = new Date();
 }

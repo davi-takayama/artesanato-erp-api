@@ -6,7 +6,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import projetos.artesanatoerpapi.application.produto.Produto;
+import projetos.artesanatoerpapi.application.produto.models.Produto;
 import projetos.artesanatoerpapi.application.vendaevento.VendaEvento;
 import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 

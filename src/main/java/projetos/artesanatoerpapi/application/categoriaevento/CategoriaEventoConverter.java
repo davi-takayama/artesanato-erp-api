@@ -1,5 +1,6 @@
 package projetos.artesanatoerpapi.application.categoriaevento;
 
+import org.springframework.stereotype.Component;
 import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEvento;
 import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoDto;
 import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoListingDto;
@@ -8,6 +9,7 @@ import projetos.artesanatoerpapi.genericclasses.ConverterInterface;
 import java.util.List;
 import java.util.UUID;
 
+@Component
 public class CategoriaEventoConverter implements ConverterInterface<CategoriaEvento, CategoriaEventoDto, CategoriaEventoListingDto> {
     @Override
     public CategoriaEvento dtoToOrm(CategoriaEventoDto dto, CategoriaEvento orm) {
