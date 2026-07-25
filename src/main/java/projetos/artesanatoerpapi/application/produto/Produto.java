@@ -22,6 +22,10 @@ public class Produto extends BaseOrm {
     @ManyToOne
     private CategoriaProduto categoriaProduto;
 
+    @JoinColumn(name = "produto_id", referencedColumnName = "id")
+    @ManyToOne
+    private Produto produto;
+
     @Transient
     private Float precoCusto;
     @Transient
