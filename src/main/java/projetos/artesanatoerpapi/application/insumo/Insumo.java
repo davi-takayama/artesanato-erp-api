@@ -3,7 +3,7 @@ package projetos.artesanatoerpapi.application.insumo;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import projetos.artesanatoerpapi.application.categoriainsumo.CategoriaInsumo;
+import projetos.artesanatoerpapi.application.categoriainsumo.models.CategoriaInsumo;
 import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 
 @EqualsAndHashCode(callSuper = true)

@@ -1,5 +1,8 @@
-package projetos.artesanatoerpapi.application.categoriaevento.entities;
+package projetos.artesanatoerpapi.application.categoriaevento;
 
+import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEvento;
+import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoDto;
+import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoListingDto;
 import projetos.artesanatoerpapi.genericclasses.ConverterInterface;
 
 import java.util.List;

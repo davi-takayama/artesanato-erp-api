@@ -33,11 +33,11 @@ public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, L
         return new ApiResponseDto<>(this.converter.ormToDto(orm));
     }
 
-    protected ApiResponseDto<List<Dto>> retrieveAll() {
+    protected ApiResponseDto<List<ListedItem>> retrieveAll() {
         List<Orm> ormList = this.repository.findAll();
-        List<Dto> dtoList = this.converter.ormListToDtoList(ormList);
+        List<ListedItem> dtoList = this.converter.ormListToListedItemm(ormList);
         log.info("{} list retrieved successfully: size - {}", this.entityClass.getSimpleName(), dtoList.size());
-        return new ApiResponseDto<List<Dto>>(dtoList);
+        return new ApiResponseDto<>(dtoList);
     }
 
     protected ApiResponseDto<Dto> retrieveById(UUID id, Function<Dto, Dto> afterRetrieveOperation) {

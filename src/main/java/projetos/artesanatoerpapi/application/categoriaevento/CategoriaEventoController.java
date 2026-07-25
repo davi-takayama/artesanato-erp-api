@@ -3,6 +3,7 @@ package projetos.artesanatoerpapi.application.categoriaevento;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoDto;
+import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoListingDto;
 import projetos.artesanatoerpapi.genericclasses.ApiResponseDto;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class CategoriaEventoController {
     }
 
     @GetMapping
-    public ApiResponseDto<List<CategoriaEventoDto>> findAll() {
+    public ApiResponseDto<List<CategoriaEventoListingDto>> findAll() {
         return categoriaEventoService.findAll();
     }
 

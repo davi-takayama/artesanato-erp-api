@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEvento;
-import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoConverter;
 import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoDto;
 import projetos.artesanatoerpapi.application.categoriaevento.entities.CategoriaEventoListingDto;
 import projetos.artesanatoerpapi.application.repositories.CategoriaEventoRepository;
@@ -47,7 +46,7 @@ public class CategoriaEventoService extends GenericService<CategoriaEvento, Cate
         return super.delete(UUID.fromString(id), null);
     }
 
-    public ApiResponseDto<List<CategoriaEventoDto>> findAll() {
+    public ApiResponseDto<List<CategoriaEventoListingDto>> findAll() {
         return super.retrieveAll();
     }
 
