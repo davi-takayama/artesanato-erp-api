@@ -1,6 +1,5 @@
 package projetos.artesanatoerpapi.application.produto;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import projetos.artesanatoerpapi.application.categoriaproduto.CategoriaProdutoConverter;
 import projetos.artesanatoerpapi.application.produto.enumeration.ProdutoTipo;
@@ -15,7 +14,6 @@ import java.util.UUID;
 @Component
 public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto, ProdutoListingDto> {
 
-    @Autowired
     CategoriaProdutoConverter categoriaProdutoConverter;
 
     public ProdutoConverter(CategoriaProdutoConverter categoriaProdutoConverter) {
