@@ -9,7 +9,7 @@ import projetos.artesanatoerpapi.application.produto.models.Produto;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoDto;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoListingDto;
 import projetos.artesanatoerpapi.application.produtoproduto.ProdutoProdutoService;
-import projetos.artesanatoerpapi.application.repositories.ProdutoRepository;
+import projetos.artesanatoerpapi.repositories.ProdutoRepository;
 import projetos.artesanatoerpapi.genericclasses.ApiResponseDto;
 import projetos.artesanatoerpapi.genericclasses.GenericService;
 

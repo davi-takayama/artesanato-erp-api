@@ -1,4 +1,4 @@
-package projetos.artesanatoerpapi.application.repositories;
+package projetos.artesanatoerpapi.repositories;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

@@ -1,6 +1,7 @@
 info:
   name: get all
   type: http
+  seq: 1
 
 http:
   method: GET

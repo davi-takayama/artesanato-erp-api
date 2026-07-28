@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import projetos.artesanatoerpapi.application.models.ProdutoProduto;
 import projetos.artesanatoerpapi.application.produto.models.Produto;
-import projetos.artesanatoerpapi.application.repositories.ProdutoProdutoRepository;
+import projetos.artesanatoerpapi.repositories.ProdutoProdutoRepository;
 
 import java.util.List;
 import java.util.UUID;

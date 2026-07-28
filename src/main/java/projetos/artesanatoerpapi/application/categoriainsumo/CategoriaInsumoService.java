@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import projetos.artesanatoerpapi.application.categoriainsumo.models.CategoriaInsumo;
 import projetos.artesanatoerpapi.application.categoriainsumo.models.CategoriaInsumoDto;
 import projetos.artesanatoerpapi.application.categoriainsumo.models.CategoriaInsumoListingDto;
-import projetos.artesanatoerpapi.application.repositories.CategoriaInsumoRepository;
+import projetos.artesanatoerpapi.repositories.CategoriaInsumoRepository;
 import projetos.artesanatoerpapi.genericclasses.ApiResponseDto;
 import projetos.artesanatoerpapi.genericclasses.GenericService;
 

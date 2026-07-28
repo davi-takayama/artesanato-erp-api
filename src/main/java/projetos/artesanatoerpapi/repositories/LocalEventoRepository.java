@@ -1,4 +1,4 @@
-package projetos.artesanatoerpapi.application.repositories;
+package projetos.artesanatoerpapi.repositories;
 
 import org.springframework.stereotype.Repository;
 import projetos.artesanatoerpapi.application.localevento.entities.LocalEvento;
