@@ -1,5 +1,6 @@
-package projetos.artesanatoerpapi.application.unidademedida;
+package projetos.artesanatoerpapi.application.unidademedida.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -11,6 +12,8 @@ import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 @Entity
 @Table(name = "unidade_medida")
 public class UnidadeMedida extends BaseOrm {
+    @Column
     private String nome;
+    @Column
     private String sigla;
 }
