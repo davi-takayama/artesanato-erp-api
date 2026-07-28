@@ -22,8 +22,6 @@ public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, L
             beforePersistOperation.apply(orm);
             log.info("{} before-create operation applied", this.entityClass.getSimpleName());
         }
-        orm.setCreatedAt(new Date());
-        orm.setUpdatedAt(new Date());
         this.repository.save(orm);
         log.info("{} created successfully: id - {}", this.entityClass.getSimpleName(), orm.getId());
         if (afterPersistOperations != null) {
@@ -51,7 +49,7 @@ public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, L
         return new ApiResponseDto<>(dto);
     }
 
-    protected Orm retrieveOrmById(UUID id) {
+    public Orm findOrmById(UUID id) {
         return this.repository.findById(id).orElseThrow(() -> new RuntimeException(this.entityClass.getSimpleName() + " not found: id - " + id));
     }
 
@@ -64,6 +62,7 @@ public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, L
             beforePersistOperation.apply(orm);
             log.info("{} before-update operation applied: id - {}", this.entityClass.getSimpleName(), orm.getId());
         }
+        orm.setUpdatedAt(new Date());
         this.repository.save(orm);
         log.info("{} updated successfully: id - {}", this.entityClass.getSimpleName(), orm.getId());
         if (afterPersistOperations != null) {

@@ -18,6 +18,7 @@ public class ProdutoDto extends BaseDto {
     private Float precoCusto;
     private CategoriaProdutoDto categoriaProduto;
     private Integer produtoTipo;
+    private Float quantidadeInicial;
 
     private List<ProdutoDto> insumoList;
     private List<ProdutoDto> usadoEmList;

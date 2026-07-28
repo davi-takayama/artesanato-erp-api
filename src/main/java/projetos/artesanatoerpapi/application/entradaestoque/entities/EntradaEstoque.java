@@ -10,7 +10,7 @@ import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-@Table(name = "estoque")
+@Table(name = "entrada_estoque")
 public class EntradaEstoque extends BaseOrm {
     @JoinColumn(referencedColumnName = "id", name = "produto_id", nullable = false)
     @ManyToOne

@@ -43,8 +43,8 @@ public class CategoriaEventoService extends GenericService<CategoriaEvento, Cate
         return super.retrieveAll();
     }
 
-    public CategoriaEvento retrieveOrmById(UUID id) {
-        return super.retrieveOrmById(id);
+    public CategoriaEvento findOrmById(UUID id) {
+        return super.findOrmById(id);
     }
 
     public ApiResponseDto<CategoriaEventoDto> retrieveDtoById(UUID id) {

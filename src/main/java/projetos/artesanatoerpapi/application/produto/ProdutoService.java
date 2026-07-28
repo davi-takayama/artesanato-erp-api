@@ -48,7 +48,7 @@ public class ProdutoService extends GenericService<Produto, ProdutoDto, ProdutoL
     }
 
     private void beforePersist(Produto produto, ProdutoDto produtoDto) {
-        CategoriaProduto categoriaProduto = categoriaProdutoService.retrieveOrmById(UUID.fromString(produtoDto.getId()));
+        CategoriaProduto categoriaProduto = categoriaProdutoService.findOrmById(UUID.fromString(produtoDto.getId()));
         produto.setCategoriaProduto(categoriaProduto);
     }
 

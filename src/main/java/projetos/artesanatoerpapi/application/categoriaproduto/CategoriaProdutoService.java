@@ -41,8 +41,8 @@ public class CategoriaProdutoService extends GenericService<CategoriaProduto, Ca
         return super.retrieveAll();
     }
 
-    public CategoriaProduto retrieveOrmById(UUID id) {
-        return super.retrieveOrmById(id);
+    public CategoriaProduto findOrmById(UUID id) {
+        return super.findOrmById(id);
     }
 
     public ApiResponseDto<CategoriaProdutoDto> retrieveDtoById(UUID id) {

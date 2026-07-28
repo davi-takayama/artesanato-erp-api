@@ -42,8 +42,8 @@ public class CategoriaInsumoService extends GenericService<CategoriaInsumo, Cate
         return super.retrieveAll();
     }
 
-    public CategoriaInsumo retrieveOrmById(UUID id) {
-        return super.retrieveOrmById(id);
+    public CategoriaInsumo findOrmById(UUID id) {
+        return super.findOrmById(id);
     }
 
     public ApiResponseDto<CategoriaInsumoDto> retrieveDtoById(UUID id) {

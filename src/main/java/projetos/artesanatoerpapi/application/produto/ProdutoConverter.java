@@ -30,6 +30,7 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         orm.setPrecoCusto(dto.getPrecoCusto());
         orm.setPrecoVenda(dto.getPrecoVenda());
         orm.setProdutoTipo(ProdutoTipo.values()[dto.getProdutoTipo()]);
+        orm.setQuantidadeInicial(dto.getQuantidadeInicial());
 
         return orm;
     }
@@ -47,6 +48,7 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         dto.setPrecoVenda(orm.getPrecoVenda());
         dto.setImagemmBase64(orm.getImagemmBase64());
         dto.setCategoriaProduto(categoriaProdutoConverter.ormToDto(orm.getCategoriaProduto()));
+        dto.setQuantidadeInicial(orm.getQuantidadeInicial());
         return dto;
     }
 

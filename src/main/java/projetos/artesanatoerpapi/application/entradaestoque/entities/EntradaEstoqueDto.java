@@ -10,4 +10,7 @@ import projetos.artesanatoerpapi.genericclasses.BaseDto;
 public class EntradaEstoqueDto extends BaseDto {
     private Float quantidadeEntrada;
     private UnidadeMedidaDto unidadeMedida;
+    private Float equivalencia;
+    private String linkCompra;
+    private String idProduto;
 }

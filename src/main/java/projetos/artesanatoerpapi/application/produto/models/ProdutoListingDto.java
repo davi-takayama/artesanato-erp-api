@@ -13,5 +13,5 @@ public class ProdutoListingDto extends ListedItemDto {
     private Float precoVenda;
     private CategoriaProdutoDto categoriaProduto;
     private Integer produtoTipo;
-    private int qtdEmEstoque;
+    private float qtdEmEstoque;
 }

@@ -24,6 +24,8 @@ public class Produto extends BaseOrm {
     private Float precoCusto;
     @Column(name = "produto_tipo",  nullable = false)
     private ProdutoTipo produtoTipo;
+    @Column(name = "quantidade_inicial")
+    private Float quantidadeInicial;
 
     @JoinColumn(name = "categoria_id", referencedColumnName = "id")
     @ManyToOne
