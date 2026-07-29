@@ -1,0 +1,13 @@
+- [x] categoriaevento
+- [x] categoriainsumo
+- [x] categoriaproduto
+- [ ] entradaestoque
+- [ ] evento
+- [ ] localevento
+- [ ] models
+- [ ] producao
+- [ ] produto
+- [x] produtoinsumo
+- [ ] produtovendaevento
+- [x] unidademedida
+- [ ] vendaevento

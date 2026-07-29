@@ -46,7 +46,6 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         dto.setNome(orm.getNome());
         dto.setPrecoCusto(orm.getPrecoCusto());
         dto.setPrecoVenda(orm.getPrecoVenda());
-        dto.setImagemmBase64(orm.getImagemmBase64());
         dto.setCategoriaProduto(categoriaProdutoConverter.ormToDto(orm.getCategoriaProduto()));
         dto.setQuantidadeInicial(orm.getQuantidadeInicial());
         return dto;
@@ -63,7 +62,6 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         dto.setId(orm.getId().toString());
         dto.setNome(orm.getNome());
         dto.setPrecoVenda(orm.getPrecoVenda());
-        dto.setImagemmBase64(orm.getImagemmBase64());
         dto.setCategoriaProduto(categoriaProdutoConverter.ormToDto(orm.getCategoriaProduto()));
         dto.setProdutoTipo(orm.getProdutoTipo().ordinal());
         return dto;

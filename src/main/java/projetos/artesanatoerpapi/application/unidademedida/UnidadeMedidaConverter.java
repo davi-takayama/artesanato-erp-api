@@ -49,19 +49,19 @@ public class UnidadeMedidaConverter implements ConverterInterface<UnidadeMedida,
 
     @Override
     public List<UnidadeMedida> dtoListToOrmList(List<UnidadeMedidaDto> unidadeMedidaDtos) {
-        if (unidadeMedidaDtos == null  || unidadeMedidaDtos.isEmpty()) return List.of();
+        if (unidadeMedidaDtos == null || unidadeMedidaDtos.isEmpty()) return List.of();
         return unidadeMedidaDtos.stream().map(this::dtoToOrm).toList();
     }
 
     @Override
     public List<UnidadeMedidaDto> ormListToDtoList(List<UnidadeMedida> unidadeMedidas) {
-        if  (unidadeMedidas == null) return List.of();
+        if (unidadeMedidas == null) return List.of();
         return unidadeMedidas.stream().map(this::ormToDto).toList();
     }
 
     @Override
     public List<UnidadeMedidaListingDto> ormListToListedItemm(List<UnidadeMedida> unidadeMedidas) {
-        if  (unidadeMedidas == null) return List.of();
+        if (unidadeMedidas == null) return List.of();
         return unidadeMedidas.stream().map(this::ormToListedItem).toList();
     }
 }

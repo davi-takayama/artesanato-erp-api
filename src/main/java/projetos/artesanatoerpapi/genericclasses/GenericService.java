@@ -94,16 +94,19 @@ public abstract class GenericService<Orm extends BaseOrm, Dto extends BaseDto, L
     public Orm dtoToOrm(Dto dto, Orm orm) {
         return this.converter.dtoToOrm(dto, orm);
     }
+
     @SuppressWarnings("unused")
 
     public Dto ormToDto(Orm orm) {
         return this.converter.ormToDto(orm);
     }
+
     @SuppressWarnings("unused")
 
     public List<Dto> ormListToDtoList(List<Orm> ormList) {
         return this.converter.ormListToDtoList(ormList);
     }
+
     @SuppressWarnings("unused")
 
     public List<Orm> dtoListToOrmList(List<Dto> dtoList) {

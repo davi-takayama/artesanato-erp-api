@@ -4,7 +4,6 @@ package projetos.artesanatoerpapi.repositories;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import projetos.artesanatoerpapi.application.entradaestoque.entities.EntradaEstoque;
-import projetos.artesanatoerpapi.application.produto.models.Produto;
 import projetos.artesanatoerpapi.genericclasses.GenericRepository;
 
 import java.util.List;
@@ -15,6 +14,6 @@ public interface EntradaEstoqueRepository extends GenericRepository<EntradaEstoq
     @Query("SELECT e FROM EntradaEstoque e WHERE e.produto.id = :produtoId")
     List<EntradaEstoque> findAllByProduto_Id(UUID produtoId);
 
-
-    List<EntradaEstoque> findAllByProduto(Produto produto);
+    @Query("SELECT e FROM EntradaEstoque e WHERE e.produto.id IN :produtoIds")
+    List<EntradaEstoque> findAllByProduto_IdIn(List<UUID> produtoIds);
 }

@@ -21,7 +21,7 @@ public class EntradaEstoque extends BaseOrm {
 
     @ManyToOne
     @JoinColumn(referencedColumnName = "id", name = "unidade_medida_id", nullable = false)
-private UnidadeMedida unidadeMedida;
+    private UnidadeMedida unidadeMedida;
 
     @Column(name = "equivalencia", nullable = false, comment = "Equivalência da unidade de medida em relação à unidade base do produto")
     private Float equivalencia;

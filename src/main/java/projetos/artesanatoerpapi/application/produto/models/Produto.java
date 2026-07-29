@@ -16,18 +16,20 @@ public class Produto extends BaseOrm {
     private String nome;
     @Column(name = "id_imagem")
     private String idImagem;
-    @Transient
-    private String imagemmBase64;
     @Column(name = "preco_venda")
     private Float precoVenda;
-    @Column(name = "preco_custo")
+    @Column(name = "preco_custo", nullable = false)
     private Float precoCusto;
-    @Column(name = "produto_tipo",  nullable = false)
+    @Column(name = "produto_tipo", nullable = false)
     private ProdutoTipo produtoTipo;
-    @Column(name = "quantidade_inicial")
+    @Column(name = "quantidade_inicial", nullable = false)
     private Float quantidadeInicial;
 
     @JoinColumn(name = "categoria_id", referencedColumnName = "id")
     @ManyToOne
     private CategoriaProduto categoriaProduto;
+
+    public void setPrecoCusto(float value) {
+        this.precoCusto = value;
+    }
 }

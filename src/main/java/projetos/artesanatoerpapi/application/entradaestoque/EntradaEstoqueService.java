@@ -51,7 +51,8 @@ public class EntradaEstoqueService extends GenericService<EntradaEstoque, Entrad
         entradaEstoque.setProduto(produto);
     }
 
-    public List<EntradaEstoque> getAllByProdutoId(UUID produtoId) {
-        return entradaEstoqueRepository.findAllByProduto_Id(produtoId);
+    public List<EntradaEstoqueDto> getAllByProdutoId(UUID produtoId) {
+        return ormListToDtoList(entradaEstoqueRepository.findAllByProduto_Id(produtoId));
     }
+
 }

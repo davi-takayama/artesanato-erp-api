@@ -6,9 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProduto;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoDto;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoListingDto;
-import projetos.artesanatoerpapi.repositories.CategoriaProdutoRepository;
 import projetos.artesanatoerpapi.genericclasses.ApiResponseDto;
 import projetos.artesanatoerpapi.genericclasses.GenericService;
+import projetos.artesanatoerpapi.repositories.CategoriaProdutoRepository;
 
 import java.util.List;
 import java.util.UUID;

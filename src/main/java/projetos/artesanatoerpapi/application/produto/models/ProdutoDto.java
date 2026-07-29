@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoDto;
+import projetos.artesanatoerpapi.application.entradaestoque.entities.EntradaEstoqueDto;
+import projetos.artesanatoerpapi.application.produtoinsumo.models.ProdutoInsumoDto;
 import projetos.artesanatoerpapi.genericclasses.BaseDto;
 
 import java.util.List;
@@ -19,7 +21,9 @@ public class ProdutoDto extends BaseDto {
     private CategoriaProdutoDto categoriaProduto;
     private Integer produtoTipo;
     private Float quantidadeInicial;
+    private Float custoInsumos;
 
-    private List<ProdutoDto> insumoList;
+    private List<EntradaEstoqueDto> entradaEstoqueList;
+    private List<ProdutoInsumoDto> insumoList;
     private List<ProdutoDto> usadoEmList;
 }
