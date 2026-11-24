@@ -16,12 +16,12 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class EntradaEstoqueService extends GenericService<EntradaEstoque, EntradaEstoqueDto, EntradaEstoqueListingDto> {
+public class MovimentacaoEstoqueService extends GenericService<EntradaEstoque, EntradaEstoqueDto, EntradaEstoqueListingDto> {
     private final UnidadeMedidaService unidadeMedidaService;
-    private final ProdutoService produtoService;
     private final EntradaEstoqueRepository entradaEstoqueRepository;
+    private final ProdutoService produtoService;
 
-    public EntradaEstoqueService(EntradaEstooqueConverter entradaEstooqueConverter, UnidadeMedidaService unidadeMedidaService, ProdutoService produtoService, EntradaEstoqueRepository entradaEstoqueRepository) {
+    public MovimentacaoEstoqueService(EntradaEstooqueConverter entradaEstooqueConverter, UnidadeMedidaService unidadeMedidaService, EntradaEstoqueRepository entradaEstoqueRepository, ProdutoService produtoService) {
         super.entityClass = EntradaEstoque.class;
         super.converter = entradaEstooqueConverter;
         this.entradaEstoqueRepository = entradaEstoqueRepository;
@@ -46,7 +46,7 @@ public class EntradaEstoqueService extends GenericService<EntradaEstoque, Entrad
 
     private void getEstoqueRelations(EntradaEstoqueDto entradaEstoqueDto, EntradaEstoque entradaEstoque) {
         UnidadeMedida unidademedida = unidadeMedidaService.findOrmById(UUID.fromString(entradaEstoqueDto.getUnidadeMedida().getId()));
-        Produto produto = produtoService.findOrmById(UUID.fromString((entradaEstoqueDto.getIdProduto())));
+        Produto produto = produtoService.findOrmById(UUID.fromString(entradaEstoqueDto.getIdProduto()));
         entradaEstoque.setUnidadeMedida(unidademedida);
         entradaEstoque.setProduto(produto);
     }
