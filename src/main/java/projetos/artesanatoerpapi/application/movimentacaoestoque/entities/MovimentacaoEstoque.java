@@ -19,10 +19,6 @@ public class MovimentacaoEstoque extends BaseOrm {
     @Column(name = "quantidade_movimentada", nullable = false)
     private Float quantidadeMovimentada;
 
-    @ManyToOne
-    @JoinColumn(referencedColumnName = "id", name = "unidade_medida_id", nullable = false)
-    private UnidadeMedida unidadeMedida;
-
     @Column(name = "link_compra")
     private String linkCompra;
 }

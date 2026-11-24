@@ -38,7 +38,6 @@ public class MovimentacaoEstooqueConverter implements ConverterInterface<Movimen
         dto.setQuantidadeEntrada(orm.getQuantidadeMovimentada());
         dto.setLinkCompra(orm.getLinkCompra());
         dto.setIdProduto(orm.getProduto().getId().toString());
-        dto.setUnidadeMedida(unidadeMedidaConverter.ormToDto(orm.getUnidadeMedida()));
         return dto;
     }
 
@@ -54,7 +53,6 @@ public class MovimentacaoEstooqueConverter implements ConverterInterface<Movimen
         dto.setQuantidadeEntrada(orm.getQuantidadeMovimentada());
         dto.setLinkCompra(orm.getLinkCompra());
         dto.setIdProduto(orm.getProduto().getId().toString());
-        dto.setUnidadeMedida(unidadeMedidaConverter.ormToDto(orm.getUnidadeMedida()));
         return dto;
     }
 

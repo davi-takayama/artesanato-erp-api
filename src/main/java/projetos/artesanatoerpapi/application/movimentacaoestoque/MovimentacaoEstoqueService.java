@@ -47,7 +47,6 @@ public class MovimentacaoEstoqueService extends GenericService<MovimentacaoEstoq
     private void getEstoqueRelations(MovimentacaoEstoqueDto movimentacaoEstoqueDto, MovimentacaoEstoque movimentacaoEstoque) {
         UnidadeMedida unidademedida = unidadeMedidaService.findOrmById(UUID.fromString(movimentacaoEstoqueDto.getUnidadeMedida().getId()));
         Produto produto = produtoService.findOrmById(UUID.fromString(movimentacaoEstoqueDto.getIdProduto()));
-        movimentacaoEstoque.setUnidadeMedida(unidademedida);
         movimentacaoEstoque.setProduto(produto);
     }
 
