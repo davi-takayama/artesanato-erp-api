@@ -6,6 +6,12 @@ info:
 http:
   method: POST
   url: http://localhost:8080/categoria-insumo
+  body:
+    type: json
+    data: |-
+      {
+        "nome": "categoria insumo teste"
+      }
   auth: inherit
 
 settings:
