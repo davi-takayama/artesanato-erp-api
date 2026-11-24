@@ -1,4 +1,4 @@
-package projetos.artesanatoerpapi.application.entradaestoque.entities;
+package projetos.artesanatoerpapi.application.movimentacaoestoque.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -10,21 +10,18 @@ import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-@Table(name = "entrada_estoque")
-public class EntradaEstoque extends BaseOrm {
+@Table(name = "movimentacao_estoque")
+public class MovimentacaoEstoque extends BaseOrm {
     @JoinColumn(referencedColumnName = "id", name = "produto_id", nullable = false)
     @ManyToOne
     private Produto produto;
 
-    @Column(name = "quantidade_entrada", nullable = false)
-    private Float quantidadeEntrada;
+    @Column(name = "quantidade_movimentada", nullable = false)
+    private Float quantidadeMovimentada;
 
     @ManyToOne
     @JoinColumn(referencedColumnName = "id", name = "unidade_medida_id", nullable = false)
     private UnidadeMedida unidadeMedida;
-
-    @Column(name = "equivalencia", nullable = false, comment = "Equivalência da unidade de medida em relação à unidade base do produto")
-    private Float equivalencia;
 
     @Column(name = "link_compra")
     private String linkCompra;

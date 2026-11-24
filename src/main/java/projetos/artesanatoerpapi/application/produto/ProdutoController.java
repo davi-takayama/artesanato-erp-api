@@ -2,7 +2,7 @@ package projetos.artesanatoerpapi.application.produto;
 
 
 import org.springframework.web.bind.annotation.*;
-import projetos.artesanatoerpapi.application.entradaestoque.MovimentacaoEstoqueService;
+import projetos.artesanatoerpapi.application.movimentacaoestoque.MovimentacaoEstoqueService;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoDto;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoListingDto;
 import projetos.artesanatoerpapi.genericclasses.ApiResponseDto;
@@ -32,7 +32,7 @@ public class ProdutoController {
     public ApiResponseDto<ProdutoDto> findById(@PathVariable String id) {
         UUID produtoId = UUID.fromString(id);
         ApiResponseDto<ProdutoDto> response = produtoService.findById(produtoId);
-        response.getData().setEntradaEstoqueList(movimentacaoEstoqueService.getAllByProdutoId(produtoId));
+        response.getData().setMovimentacaoEstoqueList(movimentacaoEstoqueService.getAllByProdutoId(produtoId));
         return response;
     }
 

@@ -1,16 +1,15 @@
-package projetos.artesanatoerpapi.application.entradaestoque.entities;
+package projetos.artesanatoerpapi.application.movimentacaoestoque.entities;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import projetos.artesanatoerpapi.application.unidademedida.models.UnidadeMedidaDto;
-import projetos.artesanatoerpapi.genericclasses.ListedItemDto;
+import projetos.artesanatoerpapi.genericclasses.BaseDto;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class EntradaEstoqueListingDto extends ListedItemDto {
+public class MovimentacaoEstoqueDto extends BaseDto {
     private Float quantidadeEntrada;
     private UnidadeMedidaDto unidadeMedida;
-    private Float equivalencia;
     private String linkCompra;
     private String idProduto;
 }
