@@ -9,7 +9,7 @@ import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-@Table(name = "categoria_produto")
-public class CategoriaProduto extends BaseOrm {
+@Table(name = "categoria_produto_insumo")
+public class CategoriaProdutoInsumo extends BaseOrm {
     private String nome;
 }

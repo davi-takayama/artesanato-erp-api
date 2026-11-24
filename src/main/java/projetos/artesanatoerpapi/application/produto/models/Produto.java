@@ -3,7 +3,7 @@ package projetos.artesanatoerpapi.application.produto.models;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProduto;
+import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoInsumo;
 import projetos.artesanatoerpapi.application.produto.enumeration.ProdutoTipo;
 import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 
@@ -27,7 +27,7 @@ public class Produto extends BaseOrm {
 
     @JoinColumn(name = "categoria_id", referencedColumnName = "id")
     @ManyToOne
-    private CategoriaProduto categoriaProduto;
+    private CategoriaProdutoInsumo categoriaProdutoInsumo;
 
     public void setPrecoCusto(float value) {
         this.precoCusto = value;

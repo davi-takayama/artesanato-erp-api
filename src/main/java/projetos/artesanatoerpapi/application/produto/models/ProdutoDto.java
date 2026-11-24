@@ -3,7 +3,7 @@ package projetos.artesanatoerpapi.application.produto.models;
 import jakarta.persistence.Column;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoDto;
+import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoInsumoDto;
 import projetos.artesanatoerpapi.application.movimentacaoestoque.entities.MovimentacaoEstoqueDto;
 import projetos.artesanatoerpapi.application.produtoinsumo.models.ProdutoInsumoDto;
 import projetos.artesanatoerpapi.genericclasses.BaseDto;
@@ -18,7 +18,7 @@ public class ProdutoDto extends BaseDto {
     private String imagemmBase64;
     private Float precoVenda;
     private Float precoCusto;
-    private CategoriaProdutoDto categoriaProduto;
+    private CategoriaProdutoInsumoDto categoriaProduto;
     private Integer produtoTipo;
     private Float quantidadeInicial;
     private Float custoInsumos;

@@ -1,7 +1,7 @@
 package projetos.artesanatoerpapi.application.produto;
 
 import org.springframework.stereotype.Component;
-import projetos.artesanatoerpapi.application.categoriaproduto.CategoriaProdutoConverter;
+import projetos.artesanatoerpapi.application.categoriaproduto.CategoriaProdutoInsumoConverter;
 import projetos.artesanatoerpapi.application.produto.enumeration.ProdutoTipo;
 import projetos.artesanatoerpapi.application.produto.models.Produto;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoDto;
@@ -14,10 +14,10 @@ import java.util.UUID;
 @Component
 public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto, ProdutoListingDto> {
 
-    CategoriaProdutoConverter categoriaProdutoConverter;
+    CategoriaProdutoInsumoConverter categoriaProdutoInsumoConverter;
 
-    public ProdutoConverter(CategoriaProdutoConverter categoriaProdutoConverter) {
-        this.categoriaProdutoConverter = categoriaProdutoConverter;
+    public ProdutoConverter(CategoriaProdutoInsumoConverter categoriaProdutoInsumoConverter) {
+        this.categoriaProdutoInsumoConverter = categoriaProdutoInsumoConverter;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         dto.setNome(orm.getNome());
         dto.setPrecoCusto(orm.getPrecoCusto());
         dto.setPrecoVenda(orm.getPrecoVenda());
-        dto.setCategoriaProduto(categoriaProdutoConverter.ormToDto(orm.getCategoriaProduto()));
+        dto.setCategoriaProduto(categoriaProdutoInsumoConverter.ormToDto(orm.getCategoriaProdutoInsumo()));
         dto.setQuantidadeInicial(orm.getQuantidadeInicial());
         return dto;
     }
@@ -62,7 +62,7 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         dto.setId(orm.getId().toString());
         dto.setNome(orm.getNome());
         dto.setPrecoVenda(orm.getPrecoVenda());
-        dto.setCategoriaProduto(categoriaProdutoConverter.ormToDto(orm.getCategoriaProduto()));
+        dto.setCategoriaProduto(categoriaProdutoInsumoConverter.ormToDto(orm.getCategoriaProdutoInsumo()));
         dto.setProdutoTipo(orm.getProdutoTipo().ordinal());
         return dto;
 

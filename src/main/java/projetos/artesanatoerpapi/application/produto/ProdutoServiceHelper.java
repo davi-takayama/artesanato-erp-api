@@ -1,8 +1,8 @@
 package projetos.artesanatoerpapi.application.produto;
 
 import org.springframework.stereotype.Service;
-import projetos.artesanatoerpapi.application.categoriaproduto.CategoriaProdutoService;
-import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProduto;
+import projetos.artesanatoerpapi.application.categoriaproduto.CategoriaProdutoInsumoService;
+import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoInsumo;
 import projetos.artesanatoerpapi.application.produto.models.Produto;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoDto;
 import projetos.artesanatoerpapi.application.produtoinsumo.ProdutoInsumoService;
@@ -14,15 +14,15 @@ import java.util.UUID;
 @Service
 public class ProdutoServiceHelper {
     private final ProdutoInsumoService produtoInsumoService;
-    private final CategoriaProdutoService categoriaProdutoService;
+    private final CategoriaProdutoInsumoService categoriaProdutoInsumoService;
     private final ProdutoConverter produtoConverter;
 
     public ProdutoServiceHelper(
             ProdutoInsumoService produtoInsumoService,
-            CategoriaProdutoService categoriaProdutoService,
+            CategoriaProdutoInsumoService categoriaProdutoInsumoService,
             ProdutoConverter produtoConverter) {
         this.produtoInsumoService = produtoInsumoService;
-        this.categoriaProdutoService = categoriaProdutoService;
+        this.categoriaProdutoInsumoService = categoriaProdutoInsumoService;
         this.produtoConverter = produtoConverter;
     }
 
@@ -33,8 +33,8 @@ public class ProdutoServiceHelper {
         }
 
         produto.setPrecoCusto(precoCusto);
-        CategoriaProduto categoriaProduto = categoriaProdutoService.findOrmById(UUID.fromString(produtoDto.getId()));
-        produto.setCategoriaProduto(categoriaProduto);
+        CategoriaProdutoInsumo categoriaProdutoInsumo = categoriaProdutoInsumoService.findOrmById(UUID.fromString(produtoDto.getId()));
+        produto.setCategoriaProdutoInsumo(categoriaProdutoInsumo);
     }
 
     public void linkIngredients(Produto produto, List<Produto> produtosFilhos) {
