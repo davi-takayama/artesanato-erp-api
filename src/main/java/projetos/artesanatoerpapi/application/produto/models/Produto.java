@@ -14,14 +14,10 @@ import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 public class Produto extends BaseOrm {
     @Column(nullable = false)
     private String nome;
-    @Column(name = "id_imagem")
-    private String idImagem;
     @Column(name = "preco_venda")
     private Float precoVenda;
     @Column(name = "preco_custo", nullable = false)
     private Float precoCusto;
-    @Column(name = "produto_tipo", nullable = false)
-    private ProdutoTipo produtoTipo;
     @Column(name = "quantidade_inicial", nullable = false)
     private Float quantidadeInicial;
 
