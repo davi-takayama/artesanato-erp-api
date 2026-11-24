@@ -2,7 +2,6 @@ package projetos.artesanatoerpapi.application.produto;
 
 import org.springframework.stereotype.Component;
 import projetos.artesanatoerpapi.application.categoriaproduto.CategoriaProdutoInsumoConverter;
-import projetos.artesanatoerpapi.application.produto.enumeration.ProdutoTipo;
 import projetos.artesanatoerpapi.application.produto.models.Produto;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoDto;
 import projetos.artesanatoerpapi.application.produto.models.ProdutoListingDto;
@@ -29,7 +28,6 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         orm.setNome(dto.getNome());
         orm.setPrecoCusto(dto.getPrecoCusto());
         orm.setPrecoVenda(dto.getPrecoVenda());
-        orm.setProdutoTipo(ProdutoTipo.values()[dto.getProdutoTipo()]);
         orm.setQuantidadeInicial(dto.getQuantidadeInicial());
 
         return orm;
@@ -63,7 +61,6 @@ public class ProdutoConverter implements ConverterInterface<Produto, ProdutoDto,
         dto.setNome(orm.getNome());
         dto.setPrecoVenda(orm.getPrecoVenda());
         dto.setCategoriaProduto(categoriaProdutoInsumoConverter.ormToDto(orm.getCategoriaProdutoInsumo()));
-        dto.setProdutoTipo(orm.getProdutoTipo().ordinal());
         return dto;
 
     }

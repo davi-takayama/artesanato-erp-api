@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import projetos.artesanatoerpapi.application.categoriaproduto.models.CategoriaProdutoInsumo;
-import projetos.artesanatoerpapi.application.produto.enumeration.ProdutoTipo;
 import projetos.artesanatoerpapi.genericclasses.BaseOrm;
 
 @EqualsAndHashCode(callSuper = true)
